@@ -7,6 +7,12 @@ export default function () {
     htmlBefore: '<i class="material-icons">edit</i>',
     htmlAfter: '',
   }, {
+    title: "Invoices",
+    htmlBefore: '<i class="material-icons">receipt</i>',
+    to: {
+      name: 'invoices',
+    },
+  }, {
     title: 'Blog Posts',
     htmlBefore: '<i class="material-icons">vertical_split</i>',
     to: {

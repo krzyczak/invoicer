@@ -13,10 +13,15 @@ import router from './router';
 
 // Layouts
 import Default from '@/layouts/Default.vue';
+import NoSidebar from '@/layouts/NoSidebar.vue';
 
 ShardsVue.install(Vue);
 
 Vue.component('default-layout', Default);
+Vue.component('no-sidebar-layout', NoSidebar);
+
+import VueJsonPretty from "vue-json-pretty";
+Vue.component("vue-json-pretty", VueJsonPretty);
 
 Vue.config.productionTip = false;
 Vue.prototype.$eventHub = new Vue();

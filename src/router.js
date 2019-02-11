@@ -9,6 +9,10 @@ import ComponentsOverview from './views/ComponentsOverview.vue';
 import Tables from './views/Tables.vue';
 import BlogPosts from './views/BlogPosts.vue';
 
+import Login from './views/Login.vue';
+import InvoiceList from './views/InvoiceList.vue';
+import Invoice from './views/Invoice.vue';
+
 Vue.use(Router);
 
 export default new Router({
@@ -23,6 +27,22 @@ export default new Router({
     {
       path: '/',
       redirect: '/blog-overview',
+    },
+    {
+      path: "/login",
+      name: "login",
+      meta: { layout: "no-sidebar" },
+      component: Login
+    },
+    {
+      path: '/invoices',
+      name: 'invoices',
+      component: InvoiceList,
+    },
+    {
+      path: '/invoices/:id',
+      name: 'invoice',
+      component: Invoice,
     },
     {
       path: '/blog-overview',
